@@ -33,33 +33,3 @@ To run the dev server and open the project in a new browser tab:
 
 npm run serve
 There is a development HTML file located at /dev/index.html that you can view at http://localhost:8000/dev/index.html. Note that this command will serve your code using Lit's development mode (with more verbose errors). To serve your code against Lit's production mode, use npm run serve:prod.
-
-Editing
-If you use VS Code, we highly recommend the lit-plugin extension, which enables some extremely useful features for lit-html templates:
-
-Syntax highlighting
-Type-checking
-Code completion
-Hover-over docs
-Jump to definition
-Linting
-Quick Fixes
-The project is setup to recommend lit-plugin to VS Code users if they don't already have it installed.
-
-Linting
-Linting of TypeScript files is provided by ESLint and TypeScript ESLint. In addition, lit-analyzer is used to type-check and lint lit-html templates with the same engine and rules as lit-plugin.
-
-The rules are mostly the recommended rules from each project, but some have been turned off to make LitElement usage easier. The recommended rules are pretty strict, so you may want to relax them by editing .eslintrc.json and tsconfig.json.
-
-To lint the project run:
-
-npm run lint
-Formatting
-Prettier is used for code formatting. It has been pre-configured according to the Lit's style. You can change this in .prettierrc.json.
-
-Prettier has not been configured to run when committing files, but this can be added with Husky and and pretty-quick. See the prettier.io site for instructions.
-
-Bundling and minification
-This starter project doesn't include any build-time optimizations like bundling or minification. We recommend publishing components as unoptimized JavaScript modules, and performing build-time optimizations at the application level. This gives build tools the best chance to deduplicate code, remove dead code, and so on.
-
-For information on building application projects that include LitElement components, see Build for production on the Lit site.
